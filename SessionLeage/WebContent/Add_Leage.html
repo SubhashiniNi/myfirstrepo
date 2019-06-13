@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Add League</title>
+<style></style>
+<link rel="stylesheet"  type="text/css" href="./css/addleage.css"/>
+</style>
+</head>
+<script>
+function check()
+{
+	 alert("welcome to home page");
+    var x=document.getElementById("Title").value;
+var y=document.getElementById("na").value;
+car z=document.getElementById("ye").value;
+var flag=true;
+
+    
+      
+    if(x=="select"){
+        flag=false;
+        document.getElementById("s").innerHTML="select title";
+        }
+
+        if(y==""){
+            flag=false;
+        document.getElementById("sp").innerHTML="select name";
+        }
+
+        if(z==""){
+            flag=false;
+            document.getElementById("spa").innerHTML="select year";
+            }
+    return flag;
+    	
+}
+</script>
+<body>
+     <form action="add_league.do" method="">
+     <table id='table1'>
+     <tr>
+     <td><label>Name</label></td>
+     <td><input type='text' placeholder='enter league Name' name='name' id='na' ></td><td><span id="sp"></span></td></tr>
+     <tr><td><label>Year</label></td>
+     <td><input type='text' placeholder='enter league year' name='year' id="ye"></td><td><span id="spa"></span></td></tr>
+     <tr><td><label>Title</label></td>
+     <td><select name='Title' id='Title'>
+     <option value='select'>Select...</option>
+     <option value='fsd'>FSD</option>
+     <option value='sap'>SAP</option>
+     <option value='spring'>Spring</option>
+     </select></td>
+     <td><span id='s'></span></td></tr>
+     <tr><td><input type='submit' value="AddLeage" onclick="check()"/></td></tr>
+     </table>
+     </form>
+</body>
+</html>
