@@ -1,0 +1,9 @@
+1.select curdate() "DATE";
+2.select employee_id,last_name,salary,(salary+(salary*155/1000)) "NewSalary" from employees;
+3. select employee_id,last_name,salary,(salary+(salary*155/1000)) "NewSalary",(salary*155/1000) "Increase" from employees;
+4. select last_name "Name", length(last_name) from employees where last_name like '%j' or last_name like '%a' or last_name like '%m';
+5.select last_name,TIMESTAMPDIFF(MONTH,hire_date,curdate()) AS'"MonthsWorked' from employees ;
+6. select concat(last_name,"earns",salary,"monthly but wants",(salary*3))  "Dreams Salaries" from employees;
+
+7.  select last_name,LPAD(salary,10,'$') "salary" from employees;
+8.select hire_date ,date_add(hire_date,interval 6 month) from employees;
